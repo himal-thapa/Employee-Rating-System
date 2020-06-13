@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Major Project</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap.css') }}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <style type="text/css">
+    html{
+      background-image: linear-gradient(to bottom right, #B993D6, #8CA6DB);
+    }
+    body{
+      background-color: transparent !important;
+    }
+  </style>
+  <body>
+   <div class="wrapper">
+    <div class="container">
+      <br>
+      <div class="text-center">
+        <img src="{{url_for('static', filename='logo.png')}}">
+      </div>
+      <br>
+      <h2 class="text-center">Employee Rating System using Data Mining</h2>
+      <br>
+      <hr/>
+      <form action="/" method="POST">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+              <label for="attendance">Attendance</label>
+              <input type="number" required name="attendance" class="form-control" placeholder="Enter Attendance in days" min="0" max="32">
+              <br/>
+              <label for="feedback">Feedback</label>
+              <input type="number" required name="feedback" class="form-control" placeholder="Enter Feedback" min="0" max="10">
+              <br/>
+              <label for="overtime">Overtime(hours)</label>
+              <input type="number" required name="overtime" class="form-control" placeholder="Enter Overtime in hrs" min="0" max="30">
+            </div>
+            </div>
+
+            <div class="col-4">
+              <div class="form-group">
+              <label for="education">Education Level</label>
+              <select class="custom-select" name="education" required>
+                <option value="">Choose a Level</option>
+                <option value="1">S.L.C</option>
+                <option value="2">+2</option>
+                <option value="3">Bachelors</option>
+                <option value="4">Masters</option>
+                <option value="5">Phd</option>
+              </select>
+              <br/>
+              <br/>
+              <label for="flexibility">Flexibility</label>
+              <input type="number" required name="flexibility" class="form-control" placeholder="Enter Flexibility" min="0" max="5">
+              <br/>
+              <label for="punctuality">Punctuality</label>
+              <input type="number" required name="punctuality" class="form-control" placeholder="Enter Punctuality" min="0" max="5">
+            </div>
+            </div>
+
+            <div class="col-4">
+              <div class="form-group">
+              <label for="teamwork">Team Work</label>
+              <input type="number" required name="teamwork" class="form-control" placeholder="Enter Team Work" min="0" max="5">
+              <br/>
+              <label for="presentationskill">Presentation</label>
+              <input type="number" required name="presentationskill" class="form-control" placeholder="Enter Presentation Skill" min="0" max="5">
+              <br/>
+              <label for="meetsdeadline">Meets Deadline</label>
+              <input type="number" required name="meetsdeadline" class="form-control" placeholder="Meets Deadline" min="0" max="5">
+            </div>
+            </div>
+          </div>
+        </div>  
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col-8">
+              <button class="btn btn-primary btn-block" type="submit">Predict</button>
+            </div>
+            <div class="col-4">
+              <a class="btn btn-danger btn-block" href="/">Clear</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
+
+<!--       <form action="/" method="POST">
+        <label for="attendance">Attendance</label>
+        <input type="number" name="attendance" />
+        <br />
+
+        <label for="feedback">Feedback</label>
+        <input type="number" name="feedback" />
+        <br />
+
+        <label for="attendance">Overtime(hours)</label>
+        <input type="number" name="overtime" />
+        <br />
+
+        <label for="education">Education Level</label>
+        <input type="number" name="education" />
+        <br />
+
+        <label for="flexibility">Flexibility</label>
+        <input type="number" name="flexibility" />
+        <br />
+
+        <label for="punctuality">Punctuality</label>
+        <input type="number" name="punctuality" />
+        <br />
+
+        <label for="teamwork">Team Work</label>
+        <input type="number" name="teamwork" />
+        <br />
+
+        <label for="presentationskill">Presentation Skills</label>
+        <input type="number" name="presentationskill" />
+        <br />
+
+        <label for="meetsdeadline">Meets Deadline</label>
+        <input type="number" name="meetsdeadline" />
+        <br />
+
+        <button type="submit">Predict</button>
+      </form> -->
+
+    <script src="{{ url_for('static', filename='bootstrap.js') }}"></script>
+  </body>
+</html>
